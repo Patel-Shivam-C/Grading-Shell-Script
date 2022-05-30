@@ -1,0 +1,66 @@
+#!/bin/bash
+PATH=/bin:/usr/bin ; export PATH
+umask 022
+
+#Name: Patel Shivam
+#Student number: 041043423
+#course Code: CST8102
+#Lab section: 311
+#"myGrade" script help students to find total numeric grade and letter grades. To finds numeric grade simple addition is used and to letter grade if-then-else statement is used.  
+
+read -p "Enter Assignment marks (0-40): " assiMarks
+read -p "Enter Test 1 marks (0-15): " test1Marks
+read -p "Enter test 2 marks (0-15): " test2Marks
+read -p "Enter Final exam mark (0-30): " finalExamMarks
+
+(( finalGrade = $assiMarks + $test1Marks + $test2Marks + $finalExamMarks ))
+
+if [[ $finalGrade -ge 90 ]] && [[ $finalGrade -le 100 ]]
+then
+        echo
+	echo "Your final numeric grade is " $finalGrade ", and your final letter grade is A+"
+elif [[ $finalGrade -ge 85 ]] && [[ $finalGrade -le 89 ]]
+then
+	echo
+	echo "Your final numeric grade is " $finalGrade ", and your final letter grade is A"
+elif [[ $finalGrade -ge 80 ]] && [[ $finalGrade -le 84 ]]
+then
+        echo
+	echo "Your final numeric grade is " $finalGrade ", and your final letter grade is A-"
+elif [[ $finalGrade -ge 77 ]] && [[ $finalGrade -le 79 ]]
+then
+        echo
+	echo "Your final numeric grade is " $finalGrade ", and your final letter grade is B+"
+elif [[ $finalGrade -ge 73 ]] && [[ $finalGrade -le 76 ]]
+then
+        echo
+	echo "Your final numeric grade is " $finalGrade ", and your final letter grade is B"
+elif [[ $finalGrade -ge 70 ]] && [[ $finalGrade -le 72 ]]
+then
+        echo
+	echo "Your final numeric grade is " $finalGrade ", and your final letter grade is B-"
+elif [[ $finalGrade -ge 67 ]] && [[ $finalGrade -le 69 ]]
+then
+        echo
+	echo "Your final numeric grade is " $finalGrade ", and your final letter grade is C+"
+elif [[ $finalGrade -ge 63 ]] && [[ $finalGrade -le 66 ]]
+then
+        echo
+	echo "Your final numeric grade is " $finalGrade ", and your final letter grade is C"
+elif [[ $finalGrade -ge 60 ]] && [[ $finalGrade -le 62 ]]
+then
+        echo
+	echo "Your final numeric grade is " $finalGrade ", and your final letter grade is C-"
+elif [[ $finalGrade -ge 57 ]] && [[ $finalGrade -le 59 ]]
+then
+        echo
+	echo "Your final numeric grade is " $finalGrade ", and your final letter grade is D+"
+elif [[ $finalGrade -ge 50 ]] && [[ $finalGrade -le 56 ]]
+then
+        echo
+	echo "Your final numeric grade is " $finalGrade ", and your final letter grade is D"
+elif [[ $finalGrade -ge 0 ]] && [[ $finalGrade -le 49 ]]
+then
+        echo
+	echo "Your final numeric grade is " $finalGrade ", and your final letter grade is F"
+fi
